@@ -2,11 +2,7 @@
   <div class="d-flex flex-column align-items-center my-5">
     <h1>Results</h1>
     <div>
-      <% if @word_found %>
-        <p><strong>Congratulations!</strong> <%= user_input.upcase %> is a valid word!</p>
-      <% else %>
-        <p>Sorry but <strong> <%= @user_input %> </strong> can't be build out of <%= @letters.join(', ') %> </p>
-      <% end %>
+      <%= @result.html_safe %>
     </div>
     <a href="/new">Play again</a>
   </div>
